@@ -1,0 +1,16 @@
+[package]
+name = "pen-and-paper"
+version = "0.0.0"
+authors = ["Billy Messenger <BillyDM@protonmail.com>"]
+edition = "2018"
+license = "MIT"
+keywords = ["gui", "font", "text", "unicode", "glyph"]
+categories = ["graphics", "text-processing", "internationalization", "rendering", "gui"]
+description = "An experimental font rendering library for Rust GUI libraries (placeholder)"
+documentation = "https://docs.rs/pen-and-paper"
+repository = "https://github.com/BillyDM/pen-and-paper"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
