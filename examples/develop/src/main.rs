@@ -6,6 +6,8 @@ use winit::{
 
 use raw_gl_context::{GlConfig, GlContext};
 
+use crispy_text::Renderer;
+
 fn main() {
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new().build(&event_loop).unwrap();
@@ -18,6 +20,8 @@ fn main() {
     context.make_current();
 
     gl::load_with(|s| context.get_proc_address(s));
+
+    let mut renderer = Renderer::new();
 
     context.make_not_current();
 
@@ -36,6 +40,8 @@ fn main() {
                     gl::ClearColor(1.0, 1.0, 1.0, 1.0);
                     gl::Clear(gl::COLOR_BUFFER_BIT);
                 }
+
+                renderer.render();
 
                 context.swap_buffers();
                 context.make_not_current();
